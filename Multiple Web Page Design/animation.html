@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+<style>
+   div{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 187, 187);
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+   }
+
+   @keyframes menu-button{
+    from {width: 0px;}
+    to {width: 110px;}
+   }
+
+   div:hover::after{
+    animation: menu-button 1s ease;
+   }
+
+   div::after{
+    content: "";
+    background-color: brown;
+    width: 0px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   }    
+
+   div a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-size: 14px;
+   }
+
+</style>
+</head>
+<body>
+    <div>
+        <a href="#">MENU</a>
+    </div>
+</body>
+</html>
